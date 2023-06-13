@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MedCoach</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password</string>
+    <string name="email_id_mob_no">Email ID/Mob No</string>
+    <string name="email_id">Email ID</string>
+    <string name="phone_no">Phone No </string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="reset">reset</string>
+    <string name="register">Register</string>
+    <string name="please_enter_the_otp_sent_to_you">Please Enter the OTP sent to you</string>
+    <string name="otp_verfication">OTP Verfication</string>
+    <string name="resend_otp">RESEND</string>
+    <string name="didn_t_receive_the_otp">Didn\'t receive the OTP</string>
+    <string name="submit">Submit</string>
+</resources>

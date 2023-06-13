@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "571983811433",
+    "project_id": "medcoach-b742f",
+    "storage_bucket": "medcoach-b742f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571983811433:android:c4f1a04dae318d505da3f8",
+        "android_client_info": {
+          "package_name": "com.medical.medcoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571983811433-69bc30c5p2j46lh3n387dt0gplfdkvve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnSx2-rHVGzqMNp8yt3s2suo_-Rn5-lnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571983811433-69bc30c5p2j46lh3n387dt0gplfdkvve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
