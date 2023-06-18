@@ -140,38 +140,23 @@
 
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="fill"
-                android:orientation="horizontal">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/Google_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="54dp"
-                    android:layout_weight="1"
-                    android:text="Google"
-                    android:textColor="@color/Blue"
-                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/Facebook_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_height="54dp"
-                    android:text="Facebook"
-                    android:textColor="@color/DeepSkyBlue"
-                    android:layout_weight="1"
-                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:orientation="vertical">
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/googleLoginBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    tools:ignore="OnClick" />
+                    android:hapticFeedbackEnabled="true"
+                    />
+            </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
