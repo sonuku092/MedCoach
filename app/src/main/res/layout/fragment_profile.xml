@@ -49,7 +49,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
-            android:backgroundTint="@color/Grey"
+            android:backgroundTint="#FF8F05"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Log Out"
