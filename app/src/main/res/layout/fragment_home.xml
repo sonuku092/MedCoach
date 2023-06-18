@@ -10,6 +10,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/TOP_START"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#25E1E1E1"
@@ -53,6 +54,19 @@
             android:contentDescription="TODO" />
 
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="125dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/Yellow"/>
+
+    </LinearLayout>
 
 
 
