@@ -6,20 +6,28 @@
     tools:context=".Fragment.BlogFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Blog"/>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <GridLayout
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:columnCount="2">
+        android:orientation="vertical">
         <FrameLayout
-            android:layout_width="170dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
             android:padding="10dp"
             android:layout_margin="10dp"
-            android:background="@drawable/cardbg_2">
+            android:background="@drawable/cardbg_4">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,11 +43,11 @@
         </FrameLayout>
 
         <FrameLayout
-            android:layout_width="170dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
             android:padding="10dp"
             android:layout_margin="10dp"
-            android:background="@drawable/cardbg_2">
+            android:background="@drawable/cardbg_4">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,7 +62,7 @@
 
         </FrameLayout>
 
-    </GridLayout>
+    </LinearLayout>
     </ScrollView>
 
 </FrameLayout>
