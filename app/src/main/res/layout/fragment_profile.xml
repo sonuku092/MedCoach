@@ -21,9 +21,8 @@
             android:layout_height="54dp"
             android:clickable="true"
             android:focusable="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/img1"
-            android:contentDescription="TODO" />
+            android:background="@drawable/messenger_button_send_round_shadow"
+            android:src="@drawable/ic_person" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
