@@ -98,19 +98,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
-                android:text="Reiki"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:paddingHorizontal="20dp"
-                android:background="@drawable/cardbg_1">
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="5dp"
-                android:layout_weight="1"
                 android:text="Hypnotherapy"
                 android:gravity="center"
                 android:textStyle="bold"
@@ -164,9 +151,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="10dp"
-            android:background="@drawable/cardbg_2">
+            android:background="@drawable/cardbg_2"
+            android:clickable="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -176,7 +164,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/timg1"
+                    android:src="@drawable/ayurveda_logo"
                     android:padding="5dp"
                     android:layout_weight="2.6"
                     />
@@ -191,14 +179,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ayurveda"
-                        android:textSize="28sp"
-                        android:textStyle="bold"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ayurveda"
                         android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="@color/com_facebook_blue"
+
                         android:textStyle="bold"/>
+
 
                 </LinearLayout>
             </LinearLayout>
@@ -206,9 +192,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
-            android:background="@drawable/cardbg_2">
+            android:background="@drawable/cardbg_2"
+            android:clickable="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -218,7 +205,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/timg1"
+                    android:src="@drawable/meditation_logo"
                     android:padding="5dp"
                     android:layout_weight="2.6"
                     />
@@ -226,12 +213,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center_vertical"
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ayurveda"
+                        android:text="Meditation"
                         android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="@color/com_facebook_blue"
                         android:textStyle="bold"/>
 
                 </LinearLayout>
@@ -240,9 +230,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
-            android:background="@drawable/cardbg_2">
+            android:background="@drawable/cardbg_2"
+            android:clickable="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -252,7 +243,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/timg1"
+                    android:src="@drawable/acupunture_logo"
                     android:padding="5dp"
                     android:layout_weight="2.6"
                     />
@@ -260,20 +251,143 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center_vertical"
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ayurveda"
+                        android:text="Acupunture"
                         android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="@color/com_facebook_blue"
+
                         android:textStyle="bold"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/cardbg_2"
+            android:clickable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/cardbg_3">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/yoga_logo"
+                    android:padding="5dp"
+                    android:layout_weight="2.6"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="154dp"
+                        android:layout_height="53dp"
+
+                        android:padding="10dp"
+                        android:text="Yoga"
+                        android:textColor="@color/com_facebook_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
 
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/cardbg_2"
+            android:clickable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/cardbg_3">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/hypnotheraphy_logo"
+                    android:padding="5dp"
+                    android:layout_weight="2.6"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
 
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hypnotherapy"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="@color/com_facebook_blue"
+
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/cardbg_2"
+            android:clickable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/cardbg_3">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_reiki"
+                    android:padding="5dp"
+                    android:layout_weight="2.6"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reiki"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="@color/com_facebook_blue"
+
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
     </ScrollView>
