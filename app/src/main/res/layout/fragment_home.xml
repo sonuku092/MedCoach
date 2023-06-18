@@ -52,8 +52,8 @@
             android:background="@drawable/login_bg"
             android:src="@drawable/madcoach_logo"
             android:contentDescription="TODO" />
-
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -66,8 +66,24 @@
             android:layout_height="120dp"
             android:background="@color/Yellow"/>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Blue"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Red"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Blue"/>
+
     </LinearLayout>
-
-
 
 </FrameLayout>
