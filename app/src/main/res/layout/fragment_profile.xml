@@ -11,11 +11,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="40dp">
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="54dp"
@@ -39,6 +38,11 @@
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="15dp"
                 android:textSize="24dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/create_profile"/>
 
         </FrameLayout>
 
