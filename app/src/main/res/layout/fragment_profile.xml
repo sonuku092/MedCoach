@@ -6,45 +6,57 @@
     tools:context=".Fragment.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:background="#F6F6F6"
+        android:elevation="5dp">
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/messenger_button_send_round_shadow"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:src="@drawable/ic_person" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textStyle="bold"
+            android:layout_marginStart="64dp"/>
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="20dp"
+            android:textSize="24dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/create_profile"
+            android:backgroundTint="@color/white"/>
+
+    </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp">
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <ImageView
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/img1"
-                android:contentDescription="TODO" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello"
-                android:textStyle="bold"
-                android:layout_marginStart="64dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sonu"
-                android:textStyle="bold"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="15dp"
-                android:textSize="24dp"/>
-
-        </FrameLayout>
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="150dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
-            android:backgroundTint="@color/Grey"
+            android:backgroundTint="#FF8F05"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Log Out"
