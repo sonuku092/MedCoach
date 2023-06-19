@@ -1,5 +1,6 @@
 package com.medical.medcoach.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.medical.medcoach.R;
+import com.medical.medcoach.cont_blog;
 
 
 public class BlogFragment extends Fragment {
@@ -27,7 +29,8 @@ public class BlogFragment extends Fragment {
         blog1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Yess Working", Toast.LENGTH_SHORT).show();
+                Intent intent =new Intent(getActivity(), cont_blog.class);
+                startActivity(intent);
             }
         });
 
