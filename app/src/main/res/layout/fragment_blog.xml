@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.BlogFragment"
     android:orientation="vertical"
     android:background="#F4F4F4">
@@ -32,19 +33,40 @@
             android:layout_margin="10dp"
             android:background="@drawable/blogbg_1"
             android:orientation="horizontal">
-            <ImageView
+            <androidx.cardview.widget.CardView
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/ill1"
-                android:background="@drawable/blogbg_2"/>
-            <TextView
+                app:cardCornerRadius="6dp">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img2"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="8dp"
-                android:textStyle="bold"
-                android:justificationMode="inter_word"
-                android:text="@string/Yoga"
-                android:textSize="20dp"/>
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Yoga"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sonu"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/baseline_person_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="10dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
