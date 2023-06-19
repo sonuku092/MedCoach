@@ -29,8 +29,6 @@ import java.util.concurrent.TimeUnit;
 public class ProfileFragment extends Fragment {
 
     DatabaseReference databaseReference;
-    FirebaseDatabase firebaseDatabase;
-
     TextView UserName;
 
 
