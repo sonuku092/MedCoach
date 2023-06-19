@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MedCoach"
         tools:targetApi="31">
         <activity
+            android:name=".cont_blog"
+            android:exported="false" />
+        <activity
             android:name=".cate_meditation"
             android:exported="false" />
         <activity
