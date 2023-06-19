@@ -141,6 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginTop="125dp"
+        android:layout_marginBottom="100dp"
 
         >
 
@@ -149,43 +150,46 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+
         <RelativeLayout
+            android:id="@+id/relativeLayout_ayurveda"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="116dp"
             android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/cardbg_2"
-            android:clickable="true"
-            android:id="@+id/relativeLayout_ayurveda">
+            android:clickable="true">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
                 android:layout_margin="10dp"
-                android:background="@drawable/cardbg_3">
+                android:background="@drawable/cardbg_3"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ayurveda_logo"
-                    android:padding="5dp"
                     android:layout_weight="2.6"
-                    />
+                    android:padding="5dp"
+                    android:src="@drawable/ayurveda_logo" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical"
                     android:gravity="center_vertical"
-                    >
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ayurveda"
-                        android:textSize="20sp"
                         android:padding="10dp"
+                        android:text="Ayurveda"
                         android:textColor="@color/com_facebook_blue"
+                        android:textSize="20sp"
 
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>

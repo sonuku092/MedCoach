@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cate_ayurveda">
+    tools:context=".cate_reiki">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,7 +16,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="Ayurveda"
+                android:text="Reiki"
                 android:textStyle="bold"
                 android:padding="10sp"
                 android:textSize="28sp"/>

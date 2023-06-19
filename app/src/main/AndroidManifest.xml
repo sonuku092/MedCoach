@@ -16,6 +16,18 @@
         android:theme="@style/Theme.MedCoach"
         tools:targetApi="31">
         <activity
+            android:name=".cate_acupuncture"
+            android:exported="false" />
+        <activity
+            android:name=".cate_yoga"
+            android:exported="false" />
+        <activity
+            android:name=".cate_reiki"
+            android:exported="false" />
+        <activity
+            android:name=".cate_hypnotherapy"
+            android:exported="false" />
+        <activity
             android:name=".cont_blog"
             android:exported="false" />
         <activity
