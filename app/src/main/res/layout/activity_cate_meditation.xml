@@ -27,20 +27,6 @@
             android:layout_margin="10sp"
             android:src="@drawable/img3"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:layout_marginTop="5dp"
-            android:textAlignment="textStart"
-            android:justificationMode="inter_word"
-            android:lineSpacingExtra="8dp">
-
-
-
-        </TextView>
 
 
     </LinearLayout>
