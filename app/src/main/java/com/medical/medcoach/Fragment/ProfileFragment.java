@@ -42,7 +42,7 @@ public class ProfileFragment extends Fragment {
         UserName=view.findViewById(R.id.profile_name);
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Users");
-        databaseReference.child("+919262355173").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        databaseReference.child("+919999996262").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (task.isSuccessful()){
