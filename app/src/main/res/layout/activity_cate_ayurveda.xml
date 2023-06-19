@@ -5,9 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cate_ayurveda">
-<<<<<<< HEAD
-
-=======
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -34,5 +31,4 @@
 
         </LinearLayout>
     </ScrollView>
->>>>>>> origin/master
 </RelativeLayout>
