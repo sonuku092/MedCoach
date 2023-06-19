@@ -141,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginTop="125dp"
-        android:id="@+id/scrollView"
+
         >
 
     <LinearLayout
@@ -197,7 +197,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/cardbg_2"
-            android:clickable="true">
+            android:clickable="true"
+            android:id="@+id/relativeLayout_meditation">>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -235,7 +236,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/cardbg_2"
-            android:clickable="true">
+            android:clickable="true"
+            android:id="@+id/relativeLayout_acupunture">>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -273,7 +275,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/cardbg_2"
-            android:clickable="true">
+            android:clickable="true"
+            android:id="@+id/relativeLayout_yoga">>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -314,7 +317,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/cardbg_2"
-            android:clickable="true">
+            android:clickable="true"
+            android:id="@+id/relativeLayout_hypnotherapy">>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -355,7 +359,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/cardbg_2"
-            android:clickable="true">
+            android:clickable="true"
+            android:id="@+id/relativeLayout_reiki">>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
