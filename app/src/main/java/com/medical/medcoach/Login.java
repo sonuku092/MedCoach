@@ -23,6 +23,7 @@ public class Login extends AppCompatActivity {
 
     TextInputEditText log_email, log_password;
     Button login_btn, register_tab;
+
     FirebaseAuth mAuth;
     int counter=3;
 
