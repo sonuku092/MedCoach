@@ -12,12 +12,13 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.medical.medcoach.R;
+import com.medical.medcoach.cate_meditation;
 import com.medical.medcoach.cont_blog;
 
 
 public class BlogFragment extends Fragment {
 
-    LinearLayout blog1;
+    LinearLayout blog1, blog2;
 
 
     @Override
@@ -34,6 +35,16 @@ public class BlogFragment extends Fragment {
             }
         });
 
+        blog2=view.findViewById(R.id.blog2);
+        blog2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getActivity(), cate_meditation.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
+
 }
