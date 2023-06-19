@@ -36,9 +36,7 @@
             android:layout_marginTop="5dp"
             android:textAlignment="textStart"
             android:justificationMode="inter_word"
-
-            android:text="@string/Medi"
-       android:lineSpacingExtra="8dp">
+            android:lineSpacingExtra="8dp">
 
 
 
