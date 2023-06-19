@@ -41,7 +41,8 @@
                 android:padding="8dp"
                 android:textStyle="bold"
                 android:justificationMode="inter_word"
-                android:text="@string/Yoga" />
+                android:text="@string/Yoga"
+                android:textSize="20dp"/>
 
         </LinearLayout>
 

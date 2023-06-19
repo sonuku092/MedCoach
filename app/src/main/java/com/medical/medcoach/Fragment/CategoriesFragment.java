@@ -27,7 +27,7 @@ public class CategoriesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_categories, container, false);
-        scrollView1 = view.findViewById(R.id.scrollView);
+
         RelativeLayout relativeLayout = view.findViewById(R.id.relativeLayout_ayurveda);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,42 @@ public class CategoriesFragment extends Fragment {
                 Toast.makeText(getActivity(), "Ayurveda", Toast.LENGTH_SHORT).show();
             }
         });
+        RelativeLayout relativeLayout1=view.findViewById(R.id.relativeLayout_meditation);
+        relativeLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Meditation", Toast.LENGTH_SHORT).show();
+            }
+        });
+        RelativeLayout relativeLayout2=view.findViewById(R.id.relativeLayout_acupunture);
+        relativeLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Meditation", Toast.LENGTH_SHORT).show();
+            }
+        });
+        RelativeLayout relativeLayout3=view.findViewById(R.id.relativeLayout_yoga);
+        relativeLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Meditation", Toast.LENGTH_SHORT).show();
+            }
+        });
+        RelativeLayout relativeLayout4=view.findViewById(R.id.relativeLayout_hypnotherapy);
+        relativeLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Meditation", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-        return inflater.inflate(R.layout.fragment_categories, container, false);
+        RelativeLayout relativeLayout5=view.findViewById(R.id.relativeLayout_reiki);
+        relativeLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Meditation", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return view;
     }
 }
