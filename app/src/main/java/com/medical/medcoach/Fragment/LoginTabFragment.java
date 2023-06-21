@@ -136,8 +136,6 @@ public class LoginTabFragment extends Fragment {
                                 if (task.getResult().exists()){
                                     DataSnapshot dataSnapshot = task.getResult();
                                     String Password = String.valueOf(dataSnapshot.child("Password").getValue());
-                                    Toast.makeText(getActivity(), Password, Toast.LENGTH_SHORT).show();
-
                                     PhoneAuthProvider.getInstance().verifyPhoneNumber(
                                             "+91" + email,
                                             60,
@@ -186,9 +184,9 @@ public class LoginTabFragment extends Fragment {
                                         Toast.makeText(getActivity(), "Login Successful.",
                                                 Toast.LENGTH_SHORT).show();
                                         Intent intent= new Intent(getActivity(),MainActivity.class);
-                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
-//                                        finish();
+                                        getActivity().finish();
 
                                     } else {
                                         // If sign in fails, display a message to the user.
