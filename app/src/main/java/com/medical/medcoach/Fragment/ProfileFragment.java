@@ -21,6 +21,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.medical.medcoach.LoginRegisterActivity;
 import com.medical.medcoach.R;
 import com.medical.medcoach.getOTPActivity;
 
@@ -63,5 +64,7 @@ public class ProfileFragment extends Fragment {
     }
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getContext(), LoginRegisterActivity.class));
+        getActivity().finish();
     }
 }

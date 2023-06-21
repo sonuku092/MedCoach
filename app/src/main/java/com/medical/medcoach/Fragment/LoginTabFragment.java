@@ -59,20 +59,20 @@ public class LoginTabFragment extends Fragment {
     int counter=3;
 
 
-    @Override
-    public void onStart() {
-        // Check if user is signed in (non-null) and update UI accordingly.
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            Intent intent= new Intent(getActivity(),MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-//            finish();
-        } else {
-            sign();
-        }
-    }
+//    @Override
+//    public void onStart() {
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        super.onStart();
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if (currentUser != null) {
+//            Intent intent= new Intent(getActivity(),MainActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            startActivity(intent);
+////            finish();
+//        } else {
+//            sign();
+//        }
+//    }
 
     private void sign() {
         Intent intent = googleSignInClient.getSignInIntent();
