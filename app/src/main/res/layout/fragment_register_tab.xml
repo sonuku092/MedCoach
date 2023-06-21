@@ -53,7 +53,7 @@
             android:id="@+id/Reg_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/phone_no"
+            android:hint="@string/email_id_mob_no"
             android:textColorHint="@color/DeepSkyBlue"
             app:boxStrokeColor="@color/DeepSkyBlue"
             app:boxStrokeErrorColor="@color/ScarletRed"
@@ -64,17 +64,15 @@
             app:errorTextColor="@color/ScarletRed"
             app:helperTextTextColor="@color/DeepSkyBlue"
             app:hintTextColor="@color/DeepSkyBlue"
-            app:placeholderText="10 Digit Phone No"
+            app:placeholderText="abc@gmail.com"
             app:placeholderTextColor="#80000000">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phoneno"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:drawableStart="@drawable/baseline_local_phone_24"
+                android:drawableStart="@drawable/ic_email_24"
                 android:drawablePadding="5dp"
-                android:inputType="number"
-                android:maxLength="10"
                 android:padding="0dp"
                 android:singleLine="true"
                 android:textColorHint="#757575" />
@@ -167,72 +165,73 @@
 
         </LinearLayout>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="20dp">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="fill|center_vertical"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:gravity="fill|center_vertical"-->
+<!--                android:orientation="horizontal">-->
 
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="3dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/Cyan" />
+<!--                <View-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="3dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@color/Cyan" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:text="Login with"
-                    android:textColor="@color/Cyan" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="10dp"-->
+<!--                    android:text="Login with"-->
+<!--                    android:textColor="@color/Cyan" />-->
 
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="3dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@color/Cyan" />
-            </LinearLayout>
+<!--                <View-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="3dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@color/Cyan" />-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="fill"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:gravity="fill"-->
+<!--                android:orientation="horizontal">-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/Google_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="44dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
-                    android:text="Google"
-                    android:textColor="@color/Blue"
-                    android:textStyle="bold" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/Google_Btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="44dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"-->
+<!--                    android:text="Google"-->
+<!--                    android:textColor="@color/Blue"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:ignore="TouchTargetSizeCheck" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/Facebook_Btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="44dp"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
-                    android:text="Facebook"
-                    android:textColor="@color/DeepSkyBlue"
-                    android:textStyle="bold"
-                    tools:ignore="OnClick" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/Facebook_Btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="44dp"-->
+<!--                    android:layout_marginHorizontal="5dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"-->
+<!--                    android:text="Facebook"-->
+<!--                    android:textColor="@color/DeepSkyBlue"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:ignore="OnClick,TouchTargetSizeCheck" />-->
 
-            </LinearLayout>
-        </FrameLayout>
+<!--            </LinearLayout>-->
+<!--        </FrameLayout>-->
 
     </LinearLayout>
 

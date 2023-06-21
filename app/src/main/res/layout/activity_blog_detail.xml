@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_blog_detail_scene"
+    tools:context=".BlogDetail">
+
+
+  <ImageView
+      android:id="@+id/imageView2"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      app:srcCompat="@drawable/ic_backicon" />
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardview1"
+      android:layout_width="match_parent"
+      android:layout_height="220dp"
+      android:layout_marginVertical="5dp"
+      android:layout_marginHorizontal="15dp"
+      app:cardCornerRadius="12dp"
+      android:layout_below="@id/imageView2">
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img2"
+        android:scaleType="centerCrop"/>
+
+  </androidx.cardview.widget.CardView>
+
+  <TextView
+      android:id="@+id/author11"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/cardview1"
+      android:layout_marginStart="15dp"
+      android:fontFamily="sans-serif-condensed-medium"
+      android:textColor="@color/black"
+      android:text="Sonu kumar"
+      android:textSize="12sp"
+      app:drawableStartCompat="@drawable/baseline_person_14" />
+
+  <TextView
+      android:id="@+id/date11"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/cardview1"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="15dp"
+      android:fontFamily="sans-serif-condensed"
+      android:text="05-Jul-2023"
+      android:textSize="10sp"
+      app:drawableEndCompat="@drawable/baseline_calendar_month_10" />
+
+  <TextView
+      android:id="@+id/title11"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:fontFamily="sans-serif-condensed-medium"
+      android:text="What is meditations"
+      android:textColor="#171717"
+      android:layout_below="@id/author11"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <TextView
+      android:id="@+id/content11"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:layout_marginTop="5dp"
+      android:text="What is meditations"
+      android:textColor="#1C1C1C"
+      android:layout_below="@id/title11"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/floatingActionButton2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:contentDescription="Share Button"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginEnd="15dp"
+      android:layout_marginBottom="20dp"
+      android:clickable="true"
+      app:srcCompat="@drawable/baseline_share_24" />
+
+  <View
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/Cyan"
+      android:layout_marginHorizontal="15dp"
+      android:layout_below="@id/title11"/>
+</RelativeLayout>

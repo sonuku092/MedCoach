@@ -3,64 +3,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.ProfileFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.ProfileFragment"
+    android:background="#F5F5F5">
 
     <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp">
 
-    <FrameLayout
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="5dp"
+            android:src="@drawable/ic_person"
+            app:tint="@color/DeepSkyBlue" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/icon1"
+            android:gravity="center_vertical"
+            android:text="Profile"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/proLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/stroke_bg"
         android:paddingHorizontal="20dp"
         android:paddingTop="20dp"
         android:paddingBottom="10dp"
-        android:background="#F6F6F6"
-        android:elevation="5dp">
-
+        android:layout_marginTop="56dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="100dp"
+        android:layout_gravity="center">
         <ImageView
-            android:layout_width="54dp"
-            android:layout_height="54dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/messenger_button_send_round_shadow"
             android:clickable="true"
             android:contentDescription="@string/app_name"
             android:focusable="true"
-            android:src="@drawable/ic_person" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile" />
+    </androidx.cardview.widget.CardView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textStyle="bold"
-            android:layout_marginStart="64dp"/>
-        <TextView
-            android:id="@+id/profile_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textStyle="bold"
-            android:layout_marginStart="64dp"
             android:layout_marginTop="20dp"
-            android:textSize="24dp"/>
-        <androidx.appcompat.widget.AppCompatButton
+            android:layout_gravity="center"
+            android:text="My Profile"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profile_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="Welcome"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/DarkBlue"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/useremail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="abc@gmail.com"
+            android:textColor="#2E2E2E"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/EditProfileBtn"
+            style="@style/Widget.Material3.Button.TextButton.Dialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="@string/create_profile"
-            android:backgroundTint="@color/white"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/white"
+            android:text="EDIT PROFILE"
+            android:visibility="invisible"
+            app:icon="@drawable/baseline_edit_24" />
 
-    </FrameLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingHorizontal="20dp"
-        android:layout_marginTop="150dp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+        <Button
+            android:id="@+id/logoutBtn"
+            style="@style/Widget.Material3.Button.TextButton.Dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:backgroundTint="#FF8F05"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log Out"
-            android:onClick="logout"/>
+            android:text="Log Out   "
+            app:icon="@drawable/login" />
 
     </LinearLayout>
 

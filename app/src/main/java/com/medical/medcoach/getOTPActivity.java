@@ -1,8 +1,5 @@
 package com.medical.medcoach;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,6 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -21,15 +21,16 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class getOTPActivity extends AppCompatActivity {
+    FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
     EditText inputNo1,inputNo2,inputNo3,inputNo4,inputNo5,inputNo6;
     TextView showNo;
     ProgressBar progressBar;
@@ -63,6 +64,7 @@ public class getOTPActivity extends AppCompatActivity {
         fullnameTxt = getIntent().getStringExtra("FullName");
         passwordTxt = getIntent().getStringExtra("Password");
         Number = "+91"+ getIntent().getStringExtra("phoneTxt");
+        Number = "+91"+ getIntent().getStringExtra("phoneTxt");
 
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,29 +90,22 @@ public class getOTPActivity extends AppCompatActivity {
                                         submit_btn.setVisibility(View.VISIBLE);
 
                                         if (task.isSuccessful()){
+                                            String Uid = FirebaseAuth.getInstance().getUid();
+                                            Map<String, Object> user = new HashMap<>();
+                                            user.put("FullName", fullnameTxt);
+                                            user.put("Password", passwordTxt);
+                                            user.put("Email", getIntent().getStringExtra("phoneTxt"));
+                                            user.put("Uid", Uid);
+                                            firebaseFirestore.collection("Users")
+                                                    .add(user)
+                                                    .addOnSuccessListener(documentReference -> {
+                                                        FirebaseAuth.getInstance().signOut();
+                                                        Intent intent=new Intent(getOTPActivity.this,MainActivity.class);
+                                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                                        startActivity(intent);
+                                                        finish();
+                                                    });
 
-                                            databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
-                                                @Override
-                                                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                    //Check if phone is not register
-                                                    if (snapshot.hasChild(Number)){
-                                                        Toast.makeText(getOTPActivity.this, "Phone No is already registered", Toast.LENGTH_SHORT).show();
-                                                    } else {
-                                                        databaseReference.child("Users").child(Number).child("Full Name").setValue(fullnameTxt);
-                                                        databaseReference.child("Users").child(Number).child("Password").setValue(passwordTxt);
-
-                                                    }
-                                                }
-
-                                                @Override
-                                                public void onCancelled(@NonNull DatabaseError error) {
-
-                                                }
-                                            });
-                                            Toast.makeText(getOTPActivity.this, "Account Created!", Toast.LENGTH_SHORT).show();
-                                            Intent intent=new Intent(getOTPActivity.this,MainActivity.class);
-                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                            startActivity(intent);
                                         }
                                         else {
                                             Toast.makeText(getOTPActivity.this, "Login Error", Toast.LENGTH_SHORT).show();
@@ -122,7 +117,7 @@ public class getOTPActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(getOTPActivity.this, "Please check Internet Connection", Toast.LENGTH_SHORT).show();
                     }
-                    Toast.makeText(getOTPActivity.this, "OTP verify", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getOTPActivity.this, "OTP verify", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getOTPActivity.this, "Please Enter all No", Toast.LENGTH_SHORT).show();
                 }
@@ -153,7 +148,7 @@ public class getOTPActivity extends AppCompatActivity {
                             @Override
                             public void onCodeSent(@NonNull String newSendotp, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                                 getotp=newSendotp;
-                                Toast.makeText(getOTPActivity.this, "OTP send Successfully ", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getOTPActivity.this, "OTP send Successfully ", Toast.LENGTH_SHORT).show();
                             }
                         }
                 );

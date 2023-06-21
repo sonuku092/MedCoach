@@ -2,69 +2,70 @@ package com.medical.medcoach.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseException;
+import androidx.fragment.app.Fragment;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.PhoneAuthCredential;
-import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.medical.medcoach.LoginRegisterActivity;
 import com.medical.medcoach.R;
-import com.medical.medcoach.getOTPActivity;
-
-import java.util.concurrent.TimeUnit;
+import com.medical.medcoach.databinding.FragmentProfileBinding;
 
 public class ProfileFragment extends Fragment {
+    FragmentProfileBinding binding;
+    FirebaseAuth auth = FirebaseAuth.getInstance();
+    FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+    TextView UserName, UserEmail;
 
-    DatabaseReference databaseReference;
-    TextView UserName;
+    @Override
+    public void onStart() {
+        super.onStart();
+        String UID;
+        UID=auth.getCurrentUser().getUid();
+        firebaseFirestore.collection("Users")
+                .whereEqualTo("Uid",UID)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()){
+                        String UserName = "";
+                        String UserEmail = "";
+                        for (QueryDocumentSnapshot documentSnapshot: task.getResult()){
+                            UserName = (String) documentSnapshot.get("FullName");
+                            UserEmail = (String) documentSnapshot.get("Email");
+                        }
+                        binding.profileName1.setText(UserName);
+                        binding.useremail1.setText(UserEmail);
+                    }
+                }).addOnFailureListener(e -> {
 
+                });
+
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        UserName=view.findViewById(R.id.profile_name);
+        UserName=view.findViewById(R.id.profile_name1);
+        UserEmail=view.findViewById(R.id.useremail1);
 
-        databaseReference= FirebaseDatabase.getInstance().getReference("Users");
-        databaseReference.child("+919999996262").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if (task.isSuccessful()){
-                    if (task.getResult().exists()){
-                        DataSnapshot dataSnapshot = task.getResult();
-                        String Name = String.valueOf(dataSnapshot.child("Full Name").getValue());
-                        UserName.setText(Name);
+        binding = FragmentProfileBinding.inflate(inflater,container,false);
 
-                    }else {
-                        Toast.makeText(getActivity(), "User Not Exist", Toast.LENGTH_SHORT).show();
-                    }
-                }else {
-                    Toast.makeText(getActivity(), "Failed", Toast.LENGTH_SHORT).show();
-                }
+        binding.logoutBtn.setOnClickListener(v->{
 
-            }
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getContext(),LoginRegisterActivity.class));
+            getActivity().finish();
         });
 
-     return view;
+     return binding.getRoot();
     }
-    public void logout(View view) {
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getContext(), LoginRegisterActivity.class));
-        getActivity().finish();
-    }
+
 }

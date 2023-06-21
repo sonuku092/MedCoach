@@ -1,9 +1,0 @@
-<changelist name="Uncommitted_changes_before_Update_at_19-06-2023_01_12_[Changes]" date="1687117388651" recycled="true" deleted="true">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-06-2023_01_12_[Changes]/shelved.patch" />
-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 19-06-2023 01:12 [Changes]" />
-  <binary>
-    <option name="BEFORE_PATH" />
-    <option name="AFTER_PATH" value="app/src/main/res/font/bilbo.ttf" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-06-2023_01_12_[Changes]/bilbo.ttf" />
-  </binary>
-</changelist>

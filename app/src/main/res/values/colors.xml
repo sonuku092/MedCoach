@@ -23,6 +23,7 @@
     <color name="Green">#008000</color>
     <color name="Olive">#808000</color>
     <color name="Aquamarine">#7FFFD4</color>
+    <color name="light_white">#D8D8D8</color>
 
 
 </resources>

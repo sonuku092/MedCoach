@@ -1,6 +1,5 @@
 package com.medical.medcoach.Fragment;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,27 +18,26 @@ import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
-import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.medical.medcoach.MainActivity;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.medical.medcoach.LoginRegisterActivity;
 import com.medical.medcoach.R;
 import com.medical.medcoach.getOTPActivity;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 
 public class RegisterTabFragment extends Fragment {
     //create Database
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://medcoach-b742f-default-rtdb.firebaseio.com/");
+    FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
     FirebaseAuth mAuth;
     TextInputEditText Name, reg_phone, reg_password , c_password;
     Button register_btn, reset_btn;
+    int flag = 0;
 
 
     @Override
@@ -56,103 +54,125 @@ public class RegisterTabFragment extends Fragment {
 
         mAuth=FirebaseAuth.getInstance();
 
-        register_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Get data from the XML design page
-                final String fullnameTxt, phoneTxt, passwordTxt, cpasswordTxt;
-                fullnameTxt = String.valueOf(Name.getText());
-                phoneTxt = String.valueOf(reg_phone.getText());
-                passwordTxt = String.valueOf(reg_password.getText());
-                cpasswordTxt = String.valueOf(c_password.getText());
+        register_btn.setOnClickListener(v -> {
+            //Get data from the XML design page
+            final String fullnameTxt, phoneTxt, passwordTxt, cpasswordTxt;
+            fullnameTxt = String.valueOf(Name.getText());
+            phoneTxt = String.valueOf(reg_phone.getText());
+            passwordTxt = String.valueOf(reg_password.getText());
+            cpasswordTxt = String.valueOf(c_password.getText());
 
-                //Check field is empty
-                if (fullnameTxt.isEmpty()||phoneTxt.isEmpty()||passwordTxt.isEmpty()||cpasswordTxt.isEmpty()){
-                    Toast.makeText(getActivity(), "Please fill all Fields.", Toast.LENGTH_SHORT).show();
-                } else if (phoneTxt.length()!=10) {
-                    Toast.makeText(getActivity(), "Please valid Number.", Toast.LENGTH_SHORT).show();
-                    reg_phone.requestFocus();
-                } else if (!isValidPassword(passwordTxt)) {
-                    Toast.makeText(getActivity(), "Password Not Strong.", Toast.LENGTH_SHORT).show();
-                    reg_password.requestFocus();
-                } else if (!passwordTxt.equals(cpasswordTxt)) {
-                    Toast.makeText(getActivity(), "Password Not Matching.", Toast.LENGTH_SHORT).show();
-                    c_password.requestFocus();
-                } else {
+            //Check field is empty
+            if (fullnameTxt.isEmpty()||phoneTxt.isEmpty()||passwordTxt.isEmpty()||cpasswordTxt.isEmpty()){
+                Toast.makeText(getActivity(), "Please fill all Fields.", Toast.LENGTH_SHORT).show();
+            } else if (!isValidPassword(passwordTxt)) {
+                reg_password.setError("Weak Password");
+                reg_password.requestFocus();
+            } else if (!passwordTxt.equals(cpasswordTxt)) {
+                c_password.setError("Not Match");
+                c_password.requestFocus();
+            } else {
 
-                    databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            //Check if email is not register
-                            if (snapshot.hasChild("+91"+phoneTxt)){
-                                Toast.makeText(getActivity(), "Phone No is already registered", Toast.LENGTH_SHORT).show();
-                                reg_phone.requestFocus();
-                            } else {
-                                PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                                        "+91" + phoneTxt,
-                                        60,
-                                        TimeUnit.SECONDS,
-                                        getActivity(),
-                                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                                            @Override
-                                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                                                Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
+                if (!isEmail(phoneTxt)){
 
-                                            }
+                    firebaseFirestore.collection("Users")
+                        .whereEqualTo("Email",phoneTxt)
+                        .get()
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()){
+                                String Password = "";
+                                for (QueryDocumentSnapshot documentSnapshot: task.getResult()){
+                                    Password = (String) documentSnapshot.get("Password");
+                                }
+                                if (!passwordTxt.equals(Password)){
+                                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                                            "+91" + phoneTxt,
+                                            60,
+                                            TimeUnit.SECONDS,
+                                            getActivity(),
+                                            new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                                                @Override
+                                                public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                                                    Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
+                                                }
 
-                                            @Override
-                                            public void onVerificationFailed(@NonNull FirebaseException e) {
-                                                Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                                            }
+                                                @Override
+                                                public void onVerificationFailed(@NonNull FirebaseException e) {
+                                                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                }
 
-                                            @Override
-                                            public void onCodeSent(@NonNull String Sendotp, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                                Intent intent = new Intent(getActivity(),getOTPActivity.class);
-                                                intent.putExtra("phoneTxt",phoneTxt);
-                                                intent.putExtra("backend",Sendotp);
-                                                intent.putExtra("FullName",fullnameTxt);
-                                                intent.putExtra("Password",passwordTxt);
-                                                startActivity(intent);
-                                            }
-                                        }
-                                );
-                                //sending data to Firebase
+                                                @Override
+                                                public void onCodeSent(@NonNull String Sendotp, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                                    Intent intent = new Intent(getActivity(), getOTPActivity.class);
+                                                    intent.putExtra("phoneTxt", phoneTxt);
+                                                    intent.putExtra("FullName", fullnameTxt);
+                                                    intent.putExtra("Password", passwordTxt);
+                                                    intent.putExtra("backend", Sendotp);
+                                                    startActivity(intent);
+                                                }
+                                            });
 
+                                }
+                                else {
 
-//                                mAuth.createUserWithEmailAndPassword(phoneTxt, passwordTxt)
-//                                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                                            @Override
-//                                            public void onComplete(@NonNull Task<AuthResult> task) {
-//                                                if (task.isSuccessful()) {
-//                                                         databaseReference.child("Users").child(phoneTxt).child("Full Name").setValue(fullnameTxt);
-//                                                         databaseReference.child("Users").child(phoneTxt).child("Password").setValue(passwordTxt);
-//                                                    // Sign in success, update UI with the signed-in user's information
-////                                                    FirebaseUser user = mAuth.getCurrentUser();
-//
-//                                                    Toast.makeText(getActivity(), "Account Created.",
-//                                                            Toast.LENGTH_SHORT).show();
-//
-//                                                    Intent intent = new Intent(getActivity(),MainActivity.class);
-//                                                    startActivity(intent);
-//
-//                                                } else {
-//                                                    // If sign in fails, display a message to the user.
-//                                                    Toast.makeText(getActivity(), "Authentication failed.", Toast.LENGTH_SHORT).show();
-//                                                }
-//                                            }
-//                                        });
-
+                                }
                             }
-                        }
+                        }).addOnFailureListener(e -> {
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
+                        });
+                    if(!(flag ==1)){
 
-                        }
-                    });
+                        flag=0;
+                    }
+                }else {
+                    firebaseFirestore.collection("Users")
+                                    .whereEqualTo("Email",phoneTxt)
+                                            .get()
+                            .addOnCompleteListener(task -> {
+                                if (task.isSuccessful()){
+                                    String userpass = "";
+                                    for (QueryDocumentSnapshot documentSnapshot: task.getResult()){
+                                        userpass = (String) documentSnapshot.get("Password").toString();
+                                    }
+                                    if (!passwordTxt.equals(userpass)){
+                                        mAuth.createUserWithEmailAndPassword(phoneTxt, passwordTxt)
+                                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                                        if (task.isSuccessful()) {
+                                                            String Uid=FirebaseAuth.getInstance().getUid();
+                                                            Map<String, Object> user = new HashMap<>();
+                                                            user.put("FullName", fullnameTxt);
+                                                            user.put("Password", passwordTxt);
+                                                            user.put("Email", phoneTxt);
+                                                            user.put("Uid", Uid);
+                                                            firebaseFirestore.collection("Users")
+                                                                    .add(user)
+                                                                    .addOnSuccessListener(documentReference -> {
+                                                                        FirebaseAuth.getInstance().signOut();
+                                                                        startActivity(new Intent(getContext(), LoginRegisterActivity.class));
+                                                                        getActivity().finish();
+                                                                    }).addOnFailureListener(e -> {
+                                                                    });
+                                                        } else {
+                                                            // If sign in fails, display a message to the user.
+                                                            Toast.makeText(getActivity(), "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    }
+                                                });
+
+                                    }else {
+                                        Toast.makeText(getActivity(), "User Already Exist!", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            }).addOnFailureListener(e -> {
+                            });
+
                 }
 
             }
+
         });
 
         reset_btn.setOnClickListener(new View.OnClickListener() {
@@ -193,5 +213,13 @@ public class RegisterTabFragment extends Fragment {
         return true;
     }
 
+    private  Boolean isEmail(String Email){
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        Pattern pattern = Pattern.compile(regex);
+        if (!pattern.matcher(Email).matches()){
+            return false;
+        }
+        return true;
+    }
 
 }
