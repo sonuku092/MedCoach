@@ -3,6 +3,7 @@ package com.medical.medcoach.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -29,38 +30,38 @@ public class CategoriesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_categories, container, false);
 
-        RelativeLayout relativeLayout = view.findViewById(R.id.relativeLayout_ayurveda);
+        CardView relativeLayout = view.findViewById(R.id.relativeLayout_ayurveda);
 
         relativeLayout.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), cate_ayurveda.class);
             startActivity(intent);
         });
 
-        RelativeLayout relativeLayout1=view.findViewById(R.id.relativeLayout_meditation);
+        CardView relativeLayout1=view.findViewById(R.id.relativeLayout_meditation);
         relativeLayout1.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), cate_meditation.class);
             startActivity(intent);
         });
 
-        RelativeLayout relativeLayout2=view.findViewById(R.id.relativeLayout_acupunture);
+        CardView relativeLayout2=view.findViewById(R.id.relativeLayout_acupunture);
         relativeLayout2.setOnClickListener(v -> {
             Intent intent=new Intent(getActivity(), cate_acupuncture.class);
             startActivity(intent);
         });
 
-        RelativeLayout relativeLayout3=view.findViewById(R.id.relativeLayout_yoga);
+        CardView relativeLayout3=view.findViewById(R.id.relativeLayout_yoga);
         relativeLayout3.setOnClickListener(v -> {
             Intent intent=new Intent(getActivity(), cate_yoga.class);
             startActivity(intent);
         });
 
-        RelativeLayout relativeLayout4=view.findViewById(R.id.relativeLayout_hypnotherapy);
+        CardView relativeLayout4=view.findViewById(R.id.relativeLayout_hypnotherapy);
         relativeLayout4.setOnClickListener(v->{
             Intent intent=new Intent(getActivity(), cate_hypnotherapy.class);
             startActivity(intent);
         });
 
-        RelativeLayout relativeLayout5=view.findViewById(R.id.relativeLayout_reiki);
+        CardView relativeLayout5=view.findViewById(R.id.relativeLayout_reiki);
         relativeLayout5.setOnClickListener(v-> {
             Intent intent = new Intent(getActivity(), cate_reiki.class);
             startActivity(intent);
