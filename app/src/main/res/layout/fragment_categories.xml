@@ -58,36 +58,34 @@
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:translationZ="1dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/cardbg_3"
-                    android:orientation="horizontal">
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-<!--                                  <ImageView-->
-<!--                                        android:layout_width="match_parent"-->
-<!--                                        android:layout_height="match_parent"-->
-<!--                                        android:layout_weight="2.6"-->
-<!--                                        android:padding="5dp"-->
-<!--                                        android:src="@drawable/ayurveda_logo" />-->
-
-                    <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Ayurveda"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="10dp"
-                            android:text="Ayurveda"
-                            android:textColor="@color/com_facebook_blue"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
+                        android:src="@drawable/ayurveda_logo"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -98,36 +96,36 @@
                 app:cardCornerRadius="10dp"
                 android:clickable="true">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/cardbg_3"
-                    android:orientation="horizontal">
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_weight="2.6"-->
-<!--                        android:padding="5dp"-->
-<!--                        android:src="@drawable/meditation_logo" />-->
-
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:translationZ="1dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_vertical">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Meditation"
-                            android:textColor="@color/com_facebook_blue"
                             android:textSize="20sp"
+                            android:background="@drawable/cardbg_1"
                             android:textStyle="bold" />
                     </LinearLayout>
-                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    app:cardCornerRadius="8dp"
+                    android:layout_margin="5dp"
+                    app:cardElevation="0dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img3"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -138,37 +136,36 @@
                 android:clickable="true"
                 app:cardCornerRadius="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/cardbg_3"
-                    android:orientation="horizontal">
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_weight="2.6"-->
-<!--                        android:padding="5dp"-->
-<!--                        android:src="@drawable/acupunture_logo" />-->
-
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:translationZ="1dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_vertical">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Acupunture"
-                            android:textColor="@color/com_facebook_blue"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
-                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/acupunture_logo"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -179,37 +176,37 @@
                 android:clickable="true"
                 app:cardCornerRadius="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/cardbg_3"
-                    android:orientation="horizontal">
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_weight="2.6"-->
-<!--                        android:padding="5dp"-->
-<!--                        android:src="@drawable/yoga_logo" />-->
-
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:translationZ="1dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_vertical">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="154dp"
-                            android:layout_height="53dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Yoga"
-                            android:textColor="@color/com_facebook_blue"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
-                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/yoga_logo"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
 
@@ -221,39 +218,39 @@
                 android:clickable="true"
                 app:cardCornerRadius="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/cardbg_3"
-                    android:orientation="horizontal">
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_weight="2.6"-->
-<!--                        android:padding="5dp"-->
-<!--                        android:src="@drawable/hypnotheraphy_logo" />-->
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:translationZ="1dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        >
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Hypnotherapy"
-                            android:textColor="@color/com_facebook_blue"
                             android:textSize="20sp"
-
+                            android:background="@drawable/cardbg_1"
                             android:textStyle="bold" />
 
                     </LinearLayout>
-                </LinearLayout>
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/hypnotheraphy_logo"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -264,38 +261,38 @@
                 android:clickable="true"
                 app:cardCornerRadius="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/cardbg_3"
-                    android:orientation="horizontal">
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_weight="2.6"-->
-<!--                        android:padding="5dp"-->
-<!--                        android:src="@drawable/logo_reiki" />-->
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:translationZ="1dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_vertical">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Reiki"
-                            android:textColor="@color/com_facebook_blue"
                             android:textSize="20sp"
 
                             android:textStyle="bold" />
 
                     </LinearLayout>
-                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/reiki_home"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
         </GridLayout>
