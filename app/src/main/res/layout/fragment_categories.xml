@@ -19,7 +19,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/img"
+            android:src="@drawable/ic_menu_icon"
             app:tint="@color/DeepSkyBlue"
             tools:ignore="ImageContrastCheck" />
 
@@ -34,7 +34,6 @@
             android:gravity="center_vertical"
             android:text="Cate"
             android:textSize="24sp"
-            android:textStyle="bold"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
 
@@ -63,6 +62,13 @@
                     android:src="@drawable/ayurveda_logo"
                     android:scaleType="centerCrop"
                     android:importantForAccessibility="no" />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/animation_lm3qtjma"
+                        android:layout_gravity="end"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -76,10 +82,10 @@
 
                 <LinearLayout
                     android:translationZ="1dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="140dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                    android:gravity="start"
                     android:orientation="vertical">
 
                     <TextView
@@ -97,13 +103,12 @@
                     app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
                     android:layout_margin="5dp">
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ayurveda_logo"
-                        android:scaleType="centerCrop"
-                        android:contentDescription="TODO"
-                        tools:ignore="ContentDescription,HardcodedText" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/ayurveda" />
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
@@ -118,10 +123,10 @@
 
                     <LinearLayout
                         android:translationZ="1dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
+                        android:gravity="start"
                         android:orientation="vertical">
 
                         <TextView
@@ -161,10 +166,10 @@
 
                     <LinearLayout
                         android:translationZ="1dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
+                        android:gravity="start"
                         android:orientation="vertical">
 
                         <TextView
@@ -184,12 +189,12 @@
                     app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
                     android:layout_margin="5dp">
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/acupunture_logo"
-                        android:scaleType="centerCrop"
-                        tools:ignore="ContentDescription" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/animation_lm3qtjma" />
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
@@ -204,10 +209,10 @@
 
                     <LinearLayout
                         android:translationZ="1dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
+                        android:gravity="start"
                         android:orientation="vertical">
 
                         <TextView
@@ -250,10 +255,10 @@
 
                     <LinearLayout
                         android:translationZ="1dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
+                        android:gravity="start"
                         android:orientation="vertical">
 
                         <TextView
@@ -296,10 +301,10 @@
 
                     <LinearLayout
                         android:translationZ="1dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
+                        android:gravity="start"
                         android:orientation="vertical">
 
                         <TextView
@@ -320,12 +325,12 @@
                     app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
                     android:layout_margin="5dp">
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/reiki_home"
-                        android:scaleType="centerCrop"
-                        tools:ignore="ContentDescription" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/animation_lm3qtjma" />
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
