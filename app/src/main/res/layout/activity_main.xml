@@ -18,8 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="10dp"
-        android:elevation="5dp"
-        app:cardCornerRadius="12dp">
+        app:cardCornerRadius="10dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
@@ -30,7 +29,8 @@
             app:itemIconTint="@color/color_item_nav"
             app:itemTextColor="@color/color_item_nav"
             app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_nav" />
+            app:menu="@menu/bottom_nav"
+            tools:ignore="VisualLintBottomNav" />
     </androidx.cardview.widget.CardView>
 
 
