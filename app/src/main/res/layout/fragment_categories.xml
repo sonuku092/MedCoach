@@ -141,13 +141,12 @@
                     app:cardCornerRadius="8dp"
                     android:layout_margin="5dp"
                     app:cardElevation="0dp">
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/img3"
-                        android:scaleType="centerCrop"
-                        android:contentDescription="TODO"
-                        tools:ignore="ContentDescription,HardcodedText" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/animation_lm3qtjma" />
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
@@ -229,12 +228,12 @@
                     app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
                     android:layout_margin="5dp">
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/yoga_logo"
-                        android:scaleType="centerCrop"
-                        tools:ignore="ContentDescription" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/animation_lm3qtjma" />
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
@@ -276,12 +275,12 @@
                     app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
                     android:layout_margin="5dp">
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/hypnotheraphy_logo"
-                        android:scaleType="centerCrop"
-                        tools:ignore="ContentDescription" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/psychotherapy" />
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
