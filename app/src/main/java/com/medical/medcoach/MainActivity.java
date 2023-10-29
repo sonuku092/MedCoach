@@ -1,16 +1,12 @@
 package com.medical.medcoach;
 
-import static com.medical.medcoach.R.id.home;
-
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
-
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -19,7 +15,6 @@ import com.medical.medcoach.Fragment.BlogFragment;
 import com.medical.medcoach.Fragment.CategoriesFragment;
 import com.medical.medcoach.Fragment.HomeFragment;
 import com.medical.medcoach.Fragment.ProfileFragment;
-import com.medical.medcoach.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 
