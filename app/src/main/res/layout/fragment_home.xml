@@ -82,6 +82,66 @@
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
 
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:paddingHorizontal="5dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/create_profile">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/Red"
+                        android:layout_margin="5dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/Cyan"
+                        android:layout_margin="5dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/Maroon"
+                        android:layout_margin="5dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/Blue"
+                        android:layout_margin="5dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/Yellow"
+                        android:layout_margin="5dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/Silver"
+                        android:layout_margin="5dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/OrangeRed"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
 
     </LinearLayout>
 
