@@ -95,7 +95,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:text="Forget Password"/>
 
             </RelativeLayout>
@@ -106,55 +105,54 @@
                 android:layout_height="54dp"
                 android:layout_marginTop="40dp"
                 android:text="Login"
-                android:backgroundTint="@color/DeepSkyBlue"
-                android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:backgroundTint="@color/orange"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="20dp"-->
-<!--                android:layout_marginTop="50dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:gravity="fill|center_vertical"-->
-<!--                android:orientation="horizontal">-->
-<!--                <View-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="3dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:background="@color/Cyan"-->
-<!--                    android:layout_weight="1"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="fill|center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:background="@color/Cyan"
+                    android:layout_weight="1"/>
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Login with"-->
-<!--                    android:textColor="@color/Cyan"-->
-<!--                    android:layout_marginHorizontal="10dp"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login with"
+                    android:textColor="@color/Cyan"
+                    android:layout_marginHorizontal="10dp"/>
 
-<!--                <View-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="3dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:background="@color/Cyan"-->
-<!--                    android:layout_weight="1"/>-->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:background="@color/Cyan"
+                    android:layout_weight="1"/>
 
 
-<!--            </LinearLayout>-->
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical">-->
-<!--                <com.google.android.gms.common.SignInButton-->
-<!--                    android:id="@+id/googleLoginBtn"-->
-<!--                    android:layout_width="fill_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:layout_gravity="center_horizontal"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:hapticFeedbackEnabled="true"-->
-<!--                    />-->
-<!--            </LinearLayout>-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.gms.common.SignInButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:hapticFeedbackEnabled="true"
+                    />
+            </LinearLayout>
 
             </LinearLayout>
 
