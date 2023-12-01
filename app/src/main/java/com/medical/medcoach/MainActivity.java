@@ -1,90 +1,60 @@
 package com.medical.medcoach;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager2.widget.ViewPager2;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
-import com.medical.medcoach.Adapter.AdapterViewPager;
 import com.medical.medcoach.Fragment.BlogFragment;
 import com.medical.medcoach.Fragment.CategoriesFragment;
 import com.medical.medcoach.Fragment.HomeFragment;
 import com.medical.medcoach.Fragment.ProfileFragment;
+import com.medical.medcoach.databinding.ActivityMainBinding;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewPager2 viewPager2;
-    ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
-    BottomNavigationView bottomNavigationView;
+    ActivityMainBinding binding;
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        viewPager2 = findViewById(R.id.viewPager);
+        replaceFragment(new HomeFragment());
 
-        bottomNavigationView=findViewById(R.id.bottomNav);
+        binding.bottomNav.setOnItemSelectedListener(item -> {
 
-        fragmentArrayList.add(new HomeFragment());
-        fragmentArrayList.add(new CategoriesFragment());
-        fragmentArrayList.add(new BlogFragment());
-        fragmentArrayList.add(new ProfileFragment());
-
-        AdapterViewPager adapterViewPager =new AdapterViewPager(this,fragmentArrayList);
-        //set adapter
-        viewPager2.setAdapter(adapterViewPager);
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                switch (position)
-                {
-                    case 0:
-                        bottomNavigationView.setSelectedItemId(R.id.home);
-                        break;
-                    case 1:
-                        bottomNavigationView.setSelectedItemId(R.id.cate);
-                        break;
-                    case 2:
-                        bottomNavigationView.setSelectedItemId(R.id.blog);
-                        break;
-                    case 3:
-                        bottomNavigationView.setSelectedItemId(R.id.profile);
-                        break;
+            int id = item.getItemId();
+                if (id==R.id.home1) {
+                    replaceFragment(new HomeFragment());
                 }
-                super.onPageSelected(position);
-            }
+                else if (id==R.id.cate1) {
+                    replaceFragment(new CategoriesFragment());
+                }
+                else if (id==R.id.blog1) {
+                    replaceFragment(new BlogFragment());
+                }
+                else if (id==R.id.profile1)
+                    replaceFragment(new ProfileFragment());
+
+
+            return true;
         });
 
 
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    }
 
-                int id = item.getItemId();
-                if (id==R.id.home) {
-                    viewPager2.setCurrentItem(0);
-                }
-                else if (id==R.id.cate) {
-                    viewPager2.setCurrentItem(1);
-                }
-                else if (id==R.id.blog) {
-                    viewPager2.setCurrentItem(2);
-                }
-                else if (id==R.id.profile)
-                    viewPager2.setCurrentItem(3);
-
-                return true;
-            }
-        });
-
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout,fragment);
+        fragmentTransaction.commit();
     }
 }
