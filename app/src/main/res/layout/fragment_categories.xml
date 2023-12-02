@@ -8,13 +8,13 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="50dp"
         android:gravity="center_vertical"
         android:paddingHorizontal="20dp">
 
         <ImageView
             android:id="@+id/icon1"
-            android:layout_width="44dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
@@ -33,14 +33,14 @@
             android:layout_toEndOf="@id/icon1"
             android:gravity="center_vertical"
             android:text="Cate"
-            android:textSize="24sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="50dp"
         android:scrollbars="none"
         android:layout_marginBottom="100dp">
 
@@ -59,7 +59,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ayurveda_logo"
+                    android:src="@drawable/acupunture_logo"
                     android:scaleType="centerCrop"
                     android:importantForAccessibility="no" />
                     <com.airbnb.lottie.LottieAnimationView
@@ -77,6 +77,7 @@
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
                 android:clickable="true"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="10dp"
                 android:focusable="true">
 
@@ -85,7 +86,7 @@
                     android:layout_width="140dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="start"
+                    android:gravity="center_vertical"
                     android:orientation="vertical">
 
                     <TextView
@@ -93,7 +94,6 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="@string/ayurveda"
-                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
                 <androidx.cardview.widget.CardView
@@ -119,6 +119,7 @@
                 android:layout_margin="5dp"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
+                android:backgroundTint="@color/light_white"
                 tools:ignore="KeyboardInaccessibleWidget">
 
                     <LinearLayout
@@ -126,7 +127,7 @@
                         android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="start"
+                        android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
@@ -134,8 +135,6 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Meditation"
-                            android:textSize="20sp"
-                            android:background="@drawable/cardbg_1"
                             android:textStyle="bold"
                             tools:ignore="HardcodedText" />
                     </LinearLayout>
@@ -161,6 +160,7 @@
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
                 android:clickable="true"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="10dp"
                 tools:ignore="KeyboardInaccessibleWidget">
 
@@ -169,7 +169,7 @@
                         android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="start"
+                        android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
@@ -177,7 +177,6 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Acupunture"
-                            android:textSize="20sp"
                             android:textStyle="bold"
                             tools:ignore="HardcodedText" />
 
@@ -205,6 +204,7 @@
                 android:layout_margin="5dp"
                 android:clickable="true"
                 app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/light_white"
                 android:focusable="true">
 
                     <LinearLayout
@@ -212,7 +212,7 @@
                         android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="start"
+                        android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
@@ -220,7 +220,6 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Yoga"
-                            android:textSize="20sp"
                             android:textStyle="bold"
                             tools:ignore="HardcodedText" />
 
@@ -230,15 +229,15 @@
                     android:layout_width="75dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="end"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="4dp"
                     app:cardElevation="0dp"
                     android:layout_margin="5dp">
-                    <com.airbnb.lottie.LottieAnimationView
+
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:lottie_autoPlay="true"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/animation_lm3qtjma" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/timg1"/>
                 </androidx.cardview.widget.CardView>
             </androidx.cardview.widget.CardView>
 
@@ -249,6 +248,7 @@
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
                 android:clickable="true"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="10dp"
                 tools:ignore="KeyboardInaccessibleWidget">
 
@@ -258,7 +258,7 @@
                         android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="start"
+                        android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
@@ -266,8 +266,6 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Hypnotherapy"
-                            android:textSize="20sp"
-                            android:background="@drawable/cardbg_1"
                             android:textStyle="bold"
                             tools:ignore="HardcodedText" />
 
@@ -295,6 +293,7 @@
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
                 android:clickable="true"
+                android:backgroundTint="@color/light_white"
                 app:cardCornerRadius="10dp"
                 tools:ignore="KeyboardInaccessibleWidget">
 
@@ -304,7 +303,7 @@
                         android:layout_width="140dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="start"
+                        android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
@@ -312,8 +311,6 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Reiki"
-                            android:textSize="20sp"
-
                             android:textStyle="bold"
                             tools:ignore="HardcodedText" />
 

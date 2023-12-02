@@ -11,8 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:padding="10dp"
-        android:layout_margin="10dp"
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="10dp"
         android:background="@drawable/blogbg_1"
+        android:elevation="5dp"
         android:orientation="horizontal">
         <androidx.cardview.widget.CardView
             android:layout_width="120dp"

@@ -12,46 +12,46 @@
     <RelativeLayout
         android:id="@+id/TOP_START"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="110dp"
         android:background="#25E1E1E1"
         tools:ignore="UselessParent">
 
 
         <TextView
             android:layout_width="200dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="@string/bangalore"
+            android:text="MadCoach"
             android:textStyle="bold" />
 
 
-
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchbar"
+            android:id="@+id/search1"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="15dp"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/login_bg"
-            android:clickable="true"
-            android:focusable="true"
-            app:defaultQueryHint="Search" />
+            android:background="@drawable/light_bg"
+            app:iconifiedByDefault="false"
+            app:layout_constraintStart_toStartOf="@id/imageView2"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
             android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/login_bg"
-            android:src="@drawable/madcoach_logo"
             android:contentDescription="TODO"
+            android:src="@drawable/madcoach_logo"
             tools:ignore="ContentDescription,HardcodedText" />
     </RelativeLayout>
 
@@ -65,21 +65,71 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             app:cardCornerRadius="8dp"
-            android:layout_margin="10dp">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
+            android:layout_margin="10dp"
+            app:cardElevation="0dp">
+            <GridLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardCornerRadius="4dp"
-                app:cardElevation="0dp"
-                android:layout_margin="10dp">
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_columnWeight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:layout_margin="5dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Dr. Amit Jha"
+                        android:textStyle="bold"/>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/otpi1"
-                    android:importantForAccessibility="no" />
-            </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="end"
+                        android:src="@drawable/maledoctor" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_columnWeight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:layout_margin="5dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Dr. Divya B"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="41dp"
+                        android:layout_marginStart="10dp"
+                        android:textSize="10sp"
+                        android:text="Hello I'm Dr Divya"/>
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="end"
+                        android:src="@drawable/femaledoctor" />
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.card.MaterialCardView
