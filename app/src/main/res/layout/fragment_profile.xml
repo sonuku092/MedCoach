@@ -65,7 +65,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/messenger_button_send_round_shadow"
+            android:background="@color/light_white"
             android:clickable="true"
             android:contentDescription="@string/app_name"
             android:focusable="true"
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:backgroundTint="@color/Cyan"
-                android:text="EDIT PROFILE"
+                android:text="@string/edit_profile"
                 android:visibility="visible"
                 app:icon="@drawable/baseline_edit_24" />
 
